@@ -36,6 +36,9 @@ public class ThongTinXnc {
     @Basic
     @Column(name = "giayTo_id")
     private Long giayToId;
+    @Basic
+    @Column(name = "customer_id")
+    private Long customerId;
 
     public long getId() {
         return id;
@@ -151,5 +154,13 @@ public class ThongTinXnc {
         result = 31 * result + (giayPhepId != null ? giayPhepId.hashCode() : 0);
         result = 31 * result + (giayToId != null ? giayToId.hashCode() : 0);
         return result;
+    }
+
+    public Long getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(Long customerId) {
+        this.customerId = customerId;
     }
 }

@@ -27,6 +27,9 @@ public class GiayTo {
     @Basic
     @Column(name = "loaiGT_id")
     private Long loaiGtId;
+    @Basic
+    @Column(name = "customer_id")
+    private Long customerId;
 
     public long getId() {
         return id;
@@ -112,5 +115,13 @@ public class GiayTo {
         result = 31 * result + (userId != null ? userId.hashCode() : 0);
         result = 31 * result + (loaiGtId != null ? loaiGtId.hashCode() : 0);
         return result;
+    }
+
+    public Long getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(Long customerId) {
+        this.customerId = customerId;
     }
 }

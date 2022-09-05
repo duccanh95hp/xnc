@@ -27,6 +27,9 @@ public class GiayPhep {
     @Basic
     @Column(name = "loaiGP_id")
     private Long loaiGpId;
+    @Basic
+    @Column(name = "customer_id")
+    private Long customerId;
 
     public long getId() {
         return id;
@@ -112,5 +115,13 @@ public class GiayPhep {
         result = 31 * result + (userId != null ? userId.hashCode() : 0);
         result = 31 * result + (loaiGpId != null ? loaiGpId.hashCode() : 0);
         return result;
+    }
+
+    public Long getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(Long customerId) {
+        this.customerId = customerId;
     }
 }
