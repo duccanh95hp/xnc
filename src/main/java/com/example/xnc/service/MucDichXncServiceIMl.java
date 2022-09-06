@@ -1,7 +1,7 @@
 package com.example.xnc.service;
 
 import com.example.xnc.model.MucDichXnc;
-import com.example.xnc.repository.MucDinhXncRepository;
+import com.example.xnc.reponsitory.MucDinhXncRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

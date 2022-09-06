@@ -1,7 +1,7 @@
 package com.example.xnc.service;
 
 import com.example.xnc.model.HoatDong;
-import com.example.xnc.repository.HoatDongRepository;
+import com.example.xnc.reponsitory.HoatDongRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
