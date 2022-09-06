@@ -1,7 +1,7 @@
 package com.example.xnc.service;
 
 import com.example.xnc.model.CamXnc;
-import com.example.xnc.repository.CamXncRepository;
+import com.example.xnc.reponsitory.CamXncRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
