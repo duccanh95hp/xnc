@@ -1,6 +1,8 @@
 package com.example.xnc.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Users {
@@ -23,6 +25,24 @@ public class Users {
     @Basic
     @Column(name = "phone")
     private String phone;
+
+    public Users() {
+    }
+
+    public Users(long id, String username, String password, String email, String address, String phone) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.address = address;
+        this.phone = phone;
+    }
+
+    public Users (String username, String email, String password){
+        this.username = username;
+        this.email = email;
+        this.password = password;
+    }
 
     public long getId() {
         return id;
@@ -99,4 +119,18 @@ public class Users {
         result = 31 * result + (phone != null ? phone.hashCode() : 0);
         return result;
     }
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(	name = "UserRole",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Roles> roles = new HashSet<>();
+
+    public Set<Roles> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Roles> roles) {
+        this.roles = roles;
+    }
+
 }
