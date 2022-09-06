@@ -1,7 +1,7 @@
 package com.example.xnc.service;
 
 import com.example.xnc.model.Customers;
-import com.example.xnc.repository.CustomerRepository;
+import com.example.xnc.reponsitory.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
