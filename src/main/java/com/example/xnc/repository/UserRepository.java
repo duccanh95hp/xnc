@@ -1,4 +1,4 @@
-package com.example.xnc.reponsitory;
+package com.example.xnc.repository;
 
 import com.example.xnc.model.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
