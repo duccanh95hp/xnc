@@ -1,6 +1,10 @@
 package com.example.xnc.service;
 
+import com.example.xnc.dto.TimKiemXNC;
 import com.example.xnc.model.Customers;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
 
 import java.util.List;
 import java.util.Optional;
@@ -15,4 +19,6 @@ public interface CustomerService {
     Optional<Customers> findCustomersByID(long id);
 
     Customers getOne(long id);
+
+    Page<TimKiemXNC> timKiemXNC(String hoten, Integer gioiTinh, String quocTich, String soGt, Pageable pageable);
 }

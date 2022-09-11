@@ -1,9 +1,14 @@
 package com.example.xnc.service;
 
+import com.example.xnc.dto.TimKiemXNC;
 import com.example.xnc.model.Customers;
 import com.example.xnc.reponsitory.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+
 
 import java.util.List;
 import java.util.Optional;
@@ -36,5 +41,10 @@ public class CustomerServiceImp implements CustomerService{
     @Override
     public Customers getOne(long id) {
         return customerRepository.findById(id).get();
+    }
+
+    @Override
+    public Page<TimKiemXNC> timKiemXNC(String hoten, Integer gioiTinh, String quocTich, String soGt, Pageable pageable) {
+        return customerRepository.timKiemXnk(hoten,gioiTinh,quocTich,soGt,pageable);
     }
 }

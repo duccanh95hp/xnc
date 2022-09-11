@@ -21,9 +21,7 @@ public class GiayTo {
     @Basic
     @Column(name = "ngayHetHan")
     private Date ngayHetHan;
-    @Basic
-    @Column(name = "user_id")
-    private Long userId;
+
     @Basic
     @Column(name = "loaiGT_id")
     private Long loaiGtId;
@@ -71,13 +69,7 @@ public class GiayTo {
         this.ngayHetHan = ngayHetHan;
     }
 
-    public Long getUserId() {
-        return userId;
-    }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
 
     public Long getLoaiGtId() {
         return loaiGtId;
@@ -99,7 +91,7 @@ public class GiayTo {
         if (noiCap != null ? !noiCap.equals(giayTo.noiCap) : giayTo.noiCap != null) return false;
         if (ngayCap != null ? !ngayCap.equals(giayTo.ngayCap) : giayTo.ngayCap != null) return false;
         if (ngayHetHan != null ? !ngayHetHan.equals(giayTo.ngayHetHan) : giayTo.ngayHetHan != null) return false;
-        if (userId != null ? !userId.equals(giayTo.userId) : giayTo.userId != null) return false;
+
         if (loaiGtId != null ? !loaiGtId.equals(giayTo.loaiGtId) : giayTo.loaiGtId != null) return false;
 
         return true;
@@ -112,7 +104,7 @@ public class GiayTo {
         result = 31 * result + (noiCap != null ? noiCap.hashCode() : 0);
         result = 31 * result + (ngayCap != null ? ngayCap.hashCode() : 0);
         result = 31 * result + (ngayHetHan != null ? ngayHetHan.hashCode() : 0);
-        result = 31 * result + (userId != null ? userId.hashCode() : 0);
+
         result = 31 * result + (loaiGtId != null ? loaiGtId.hashCode() : 0);
         return result;
     }
