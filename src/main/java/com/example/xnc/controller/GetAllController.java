@@ -20,8 +20,15 @@ public class GetAllController {
     private ThongTinXncServiceImpl thongTinXncService;
 
     @GetMapping(path = "/thongtin")
-    public ResponseEntity<List<GetAllDto>> getALL(@RequestParam("date") Date date) {
+        public ResponseEntity<List<GetAllDto>> getALL(@RequestParam("date") Date date) {
+
+
         List<GetAllDto> getAll = thongTinXncService.findAllByCreatedAt(date);
-        return new ResponseEntity<>(getAll, HttpStatus.OK);
+        if (getAll.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } else {
+            return new ResponseEntity<>(getAll, HttpStatus.OK);
+        }
+
     }
 }
