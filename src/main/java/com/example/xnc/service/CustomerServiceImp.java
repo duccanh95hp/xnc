@@ -1,5 +1,6 @@
 package com.example.xnc.service;
 
+import com.example.xnc.dto.DetailsXNC;
 import com.example.xnc.dto.TimKiemXNC;
 import com.example.xnc.model.Customers;
 import com.example.xnc.reponsitory.CustomerRepository;
@@ -44,7 +45,12 @@ public class CustomerServiceImp implements CustomerService{
     }
 
     @Override
-    public Page<TimKiemXNC> timKiemXNC(String hoten, Integer gioiTinh, String quocTich, String soGt, Pageable pageable) {
+    public Page<TimKiemXNC> timKiemXNC(String hoten, Integer[] gioiTinh, String quocTich, String soGt, Pageable pageable) {
         return customerRepository.timKiemXnk(hoten,gioiTinh,quocTich,soGt,pageable);
+    }
+
+    @Override
+    public Page<DetailsXNC> detailsXnc(long customerId, Pageable pageable) {
+        return customerRepository.detailsXnc(customerId,pageable);
     }
 }
