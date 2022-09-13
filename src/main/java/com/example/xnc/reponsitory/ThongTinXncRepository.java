@@ -10,7 +10,7 @@ import java.util.Date;
 import java.util.List;
 
 @Repository
-public interface ThongTinXNCRepository extends JpaRepository<ThongTinXnc, Long> {
+public interface ThongTinXncRepository extends JpaRepository<ThongTinXnc, Long> {
 
 
 
