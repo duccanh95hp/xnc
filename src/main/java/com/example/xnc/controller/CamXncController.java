@@ -68,4 +68,10 @@ public class CamXncController {
         CamXnc camXnc = camXncService.getOne(id);
         return new ResponseEntity(camXnc, HttpStatus.OK);
     }
+    @GetMapping("/findCamxnc")
+    public ResponseEntity<CamXnc> findCamXnc(@RequestParam int gioitinh,@RequestParam String hoten,@RequestParam String noisinh,@RequestParam String quoctich){
+        List<CamXnc> camXnc = camXncService.getCamXnc(gioitinh,hoten,noisinh,quoctich);
+        return new ResponseEntity(camXnc, HttpStatus.OK);
+    }
+
 }

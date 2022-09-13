@@ -44,7 +44,7 @@ public class GiayToController {
             oldCamXnc.setNgayCap(giayTo.getNgayCap());
             oldCamXnc.setNgayHetHan(giayTo.getNgayHetHan());
             oldCamXnc.setNoiCap(giayTo.getNoiCap());
-            oldCamXnc.setUserId(giayTo.getUserId());
+
             giayToService.saveGiayTo(oldCamXnc);
             return ResponseEntity.ok(oldCamXnc);
         }

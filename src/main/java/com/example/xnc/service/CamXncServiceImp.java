@@ -37,4 +37,9 @@ public class CamXncServiceImp implements CamXncService{
     public CamXnc getOne(long id) {
         return camXncRepository.findById(id).get();
     }
+
+    @Override
+    public List<CamXnc> getCamXnc(int gioitinh, String hoten, String noisinh, String quoctich) {
+        return camXncRepository.findByGioiTinhAndHoTenAndNoiSinhAndQuocTich(gioitinh, hoten, noisinh, quoctich);
+    }
 }
