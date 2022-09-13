@@ -1,5 +1,6 @@
 package com.example.xnc.service;
 
+import com.example.xnc.dto.GetAllDto;
 import com.example.xnc.dto.SelectTheoLoaiGiayTo;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -12,4 +13,6 @@ public interface ThongTinXncService {
     List<SelectTheoLoaiGiayTo> findAllXncTheoLoaiGiayTo(String tenLoaiGt, Date startDate, Date endDate);
 
     List<SelectTheoLoaiGiayTo> findAllXncTheoQuocTich(String quocTich);
+
+    List<GetAllDto> findAllByCreatedAt(Date date);
 }

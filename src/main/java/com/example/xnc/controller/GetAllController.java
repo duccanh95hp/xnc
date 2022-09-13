@@ -1,8 +1,7 @@
 package com.example.xnc.controller;
 
 import com.example.xnc.dto.GetAllDto;
-import com.example.xnc.service.CustomerServiceImp;
-import com.example.xnc.service.ThongTinXncServiceImpl;
+import com.example.xnc.service.ThongTinXncService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +16,7 @@ import java.util.List;
 public class GetAllController {
 
     @Autowired
-    private ThongTinXncServiceImpl thongTinXncService;
+    private ThongTinXncService thongTinXncService;
 
     @GetMapping(path = "/thongtin")
     public ResponseEntity<List<GetAllDto>> getALL(@RequestParam("date") Date date) {

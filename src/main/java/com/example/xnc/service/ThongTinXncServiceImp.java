@@ -1,5 +1,6 @@
 package com.example.xnc.service;
 
+import com.example.xnc.dto.GetAllDto;
 import com.example.xnc.dto.SelectTheoLoaiGiayTo;
 import com.example.xnc.reponsitory.ThongTinXncRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,4 +28,10 @@ public class ThongTinXncServiceImp implements ThongTinXncService {
     public List<SelectTheoLoaiGiayTo> findAllXncTheoQuocTich(String quocTich) {
         return thongTinXncRepository.findAllXncTheoQuocTich(quocTich);
     }
+
+    @Override
+    public List<GetAllDto> findAllByCreatedAt(Date date) {
+        return thongTinXncRepository.findAllByCreatedAt(date);
+    }
+
 }
