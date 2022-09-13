@@ -39,4 +39,6 @@ public class SignupRequest {
     public void setRole(Set<String> roles) {
         this.roles = roles;
     }
+
+
 }

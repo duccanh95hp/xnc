@@ -1,6 +1,10 @@
 package com.example.xnc.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -11,15 +15,21 @@ public class Users {
     @Column(name = "id")
     private long id;
     @Basic
+    @NotEmpty
     @Column(name = "username")
     private String username;
     @Basic
+    @NotEmpty
+
     @Column(name = "password")
     private String password;
     @Basic
+    @NotEmpty
+    @Email
     @Column(name = "email")
     private String email;
     @Basic
+
     @Column(name = "address")
     private String address;
     @Basic
