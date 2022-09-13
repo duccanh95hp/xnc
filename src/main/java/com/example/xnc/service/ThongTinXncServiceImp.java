@@ -33,5 +33,4 @@ public class ThongTinXncServiceImp implements ThongTinXncService {
     public List<GetAllDto> findAllByCreatedAt(Date date) {
         return thongTinXncRepository.findAllByCreatedAt(date);
     }
-
 }
