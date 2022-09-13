@@ -13,6 +13,7 @@ import java.util.List;
 public interface ThongTinXNCRepository extends JpaRepository<ThongTinXnc, Long> {
 
 
+
     @Query("SELECT NEW com.example.xnc.dto.GetAllDto(" +
             "c.hoTen, c.gioiTinh, c.ngaySinh, c.quocTich, xnc.createdAt, md.tenMd, lgt.tenLoaiGt, gt.soGiayTo, gt.noiCap, gt.ngayCap, lgp.tenLoaiGp, gp.soGiayTo, gp.noiCap, gp.ngayCap) " +
             "FROM ThongTinXnc xnc " +
