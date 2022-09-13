@@ -15,4 +15,5 @@ public interface CamXncService {
     Optional<CamXnc> findCamXncByID(long id);
 
     CamXnc getOne(long id);
+    List<CamXnc> getCamXnc(int gioitinh,String hoten,String noisinh,String quoctich);
 }
